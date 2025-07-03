@@ -6,7 +6,7 @@
 
 ## 🌐 Live Preview
 
-> *(Add your GitHub Pages or hosting link here)*
+[>](https://zakir176.github.io/Konda/index.html)
 
 ---
 
@@ -36,4 +36,40 @@
 ---
 
 ## 📁 Project Structure
+│
+├── index.html
+├── about.html
+├── contact.html
+│
+├── components/                  # 🧩 Reusable UI parts
+│   ├── header.html              # Site header / navbar
+│   ├── footer.html              # Footer
+│   ├── profile-card.html        # Match card design
+│   └── modal-login.html         # Login/register popup
+│
+├── css/
+│   ├── style.css                # Main styles
+│   └── components/             # Component-specific styles
+│       ├── header.css
+│       ├── profile-card.css
+│       └── modal.css
+│
+├── js/
+│   ├── main.js                  # Main JS
+│   └── components/             # Component-specific scripts
+│       ├── modal.js
+│       ├── navbar.js
+│       └── profile-card.js
+│
+├── assets/
+│   ├── images/
+│   └── icons/
+│
+├── fonts/
+│
+├── users/
+│   └── example-user.html
+│
+├── README.md
+└── LICENSE
 
