@@ -1,114 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Konda – Where Students Meet</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components/load.css" />
 </head>
-<style>
-    .container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.container .preloader {
-  animation: rotate 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
-}
-
-@keyframes rotate {
-  50% {
-    transform: rotate(360deg);
-  }
-
-  100% {
-    transform: rotate(720deg);
-  }
-}
-
-.preloader span {
-  --c: #ec3ff2;
-  position: absolute;
-  display: block;
-  height: 64px;
-  width: 64px;
-  background: var(--c);
-  border: 1px solid var(--c);
-  border-radius: 100%;
-}
-
-.preloader span:nth-child(1) {
-  transform: translate(-28px, -28px);
-  animation: shape_1 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
-}
-
-@keyframes shape_1 {
-  60% {
-    transform: scale(0.4);
-  }
-}
-
-.preloader span:nth-child(2) {
-  transform: translate(28px, -28px);
-  animation: shape_2 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
-}
-
-@keyframes shape_2 {
-  40% {
-    transform: scale(0.4);
-  }
-}
-
-.preloader span:nth-child(3) {
-  position: relative;
-  border-radius: 0px;
-  transform: scale(0.98) rotate(-45deg);
-  animation: shape_3 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
-}
-
-@keyframes shape_3 {
-  50% {
-    border-radius: 100%;
-    transform: scale(0.5) rotate(-45deg);
-  }
-
-  100% {
-    transform: scale(0.98) rotate(-45deg);
-  }
-}
-
-.shadow {
-  position: relative;
-  top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: block;
-  height: 16px;
-  width: 64px;
-  border-radius: 50%;
-  background-color: #d9d9d9;
-  border: 1px solid #d9d9d9;
-  animation: shadow 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
-}
-
-@keyframes shadow {
-  50% {
-    transform: translateX(-50%) scale(0.5);
-    border-color: #f2f2f2;
-  }
-}
-
 <body>
-    </style>
-<div class="container">
-  <div class="preloader">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <div class="shadow"></div>
-</div>
-</body>
+<div class="loader_container"></div>
+<div class="main_content" style="display: none;">
+  <!-- Header -->
+  <header class="hero">
+    <div class="overlay">
+      <h1>Welcome to <span class="highlight">Konda</span></h1>
+      <p>Where Zambian university students meet, connect, and vibe.</p>
+      <a href="#join" class="cta-btn">Get Started</a>
+    </div>
+  </header>
 
+  <!-- Features Section -->
+  <section class="features">
+    <h2>Why Join Konda?</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <h3>🎓 Student Only</h3>
+        <p>Built exclusively for students in Zambian universities.</p>
+      </div>
+      <div class="feature">
+        <h3>💖 Real Connections</h3>
+        <p>Meet like-minded people looking for real vibes — or just fun chats.</p>
+      </div>
+      <div class="feature">
+        <h3>🔐 Safe & Private</h3>
+        <p>Your privacy matters. Connect with confidence, securely.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta" id="join">
+    <h2>Ready to meet your match?</h2>
+    <p>Sign up now and start vibing with fellow students across Zambia.</p>
+    <button onclick="openLoginModal()">Join Now</button>
+  </section>
+
+  <!-- Modal Login Form -->
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeLoginModal()">&times;</span>
+      <h2>Login to Konda</h2>
+      <form>
+        <input type="email" placeholder="Email" required /><br />
+        <input type="password" placeholder="Password" required /><br />
+        <button type="submit">Login</button>
+        <p>New here? <a href="#">Create an account</a></p>
+      </form>
+    </div>
+  </div>
+
+</div>
+  <script src="js/main.js"></script>
+  <script src="js/components/load.js"></script>
+</body>
 </html>
