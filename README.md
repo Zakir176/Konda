@@ -6,7 +6,7 @@
 
 ## 🌐 Live Preview
 
-[>](https://zakir176.github.io/Konda/index.html)
+[> https://zakir176.github.io/Konda/index.html 
 
 ---
 
