@@ -1,5 +1,5 @@
 // Load the loader component
-fetch('components/loader.html')
+fetch('/components/load.html')
   .then(res => res.text())
   .then(data => {
     document.getElementById("loader-container").innerHTML = data;

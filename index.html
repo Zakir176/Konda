@@ -3,64 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Konda – Where Students Meet</title>
+  <title>Konda • Connect University Students</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/components/load.css" />
 </head>
 <body>
-<div class="loader_container"></div>
-<div class="main_content" style="display: none;">
-  <!-- Header -->
-  <header class="hero">
-    <div class="overlay">
-      <h1>Welcome to <span class="highlight">Konda</span></h1>
-      <p>Where Zambian university students meet, connect, and vibe.</p>
-      <a href="#join" class="cta-btn">Get Started</a>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">Konda</div>
+      <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="about.html">About</a>
+        <a href="#features">Features</a>
+        <a href="#join">Join</a>
+      </nav>
+      <button class="btn" onclick="openLoginModal()">Login</button>
     </div>
   </header>
 
-  <!-- Features Section -->
-  <section class="features">
-    <h2>Why Join Konda?</h2>
-    <div class="feature-grid">
-      <div class="feature">
-        <h3>🎓 Student Only</h3>
-        <p>Built exclusively for students in Zambian universities.</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Discover real connections at Zambian universities.</h1>
+        <p>Konda is the trusted student-only platform for friendships, romance, and community vibes.</p>
+        <button class="btn-primary" onclick="openLoginModal()">Join Konda</button>
       </div>
-      <div class="feature">
-        <h3>💖 Real Connections</h3>
-        <p>Meet like-minded people looking for real vibes — or just fun chats.</p>
-      </div>
-      <div class="feature">
-        <h3>🔐 Safe & Private</h3>
-        <p>Your privacy matters. Connect with confidence, securely.</p>
+      <div class="hero-image">
+        <img src="assets/images/hero-illustration.svg" alt="Students connecting illustration">
       </div>
     </div>
   </section>
 
-  <!-- Call to Action -->
-  <section class="cta" id="join">
-    <h2>Ready to meet your match?</h2>
-    <p>Sign up now and start vibing with fellow students across Zambia.</p>
-    <button onclick="openLoginModal()">Join Now</button>
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="container">
+      <h2>Why Students Choose Konda</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <img src="assets/images/icon-students.svg" alt="Students icon">
+          <h3>Exclusive & Safe</h3>
+          <p>Only verified university students—Chat, match, and meet with peace of mind.</p>
+        </div>
+        <div class="feature-card">
+          <img src="assets/images/icon-vibes.svg" alt="Vibes icon">
+          <h3>Community Vibes</h3>
+          <p>Find buddies for study groups, events, or just a cool conversation.</p>
+        </div>
+        <div class="feature-card">
+          <img src="assets/images/icon-instant.svg" alt="Instant connect icon">
+          <h3>Instant Matches</h3>
+          <p>Swipe, connect, and message—it’s quick, seamless, and fun.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Modal Login Form -->
+  <!-- Call To Action -->
+  <section id="join" class="cta">
+    <div class="container">
+      <h2>Ready to join the Konda community?</h2>
+      <button class="btn-primary" onclick="openLoginModal()">Get Started</button>
+    </div>
+  </section>
+
+  <!-- Modal Login -->
   <div class="modal" id="loginModal">
     <div class="modal-content">
       <span class="close-btn" onclick="closeLoginModal()">&times;</span>
       <h2>Login to Konda</h2>
       <form>
-        <input type="email" placeholder="Email" required /><br />
-        <input type="password" placeholder="Password" required /><br />
-        <button type="submit">Login</button>
-        <p>New here? <a href="#">Create an account</a></p>
+        <input type="email" placeholder="University Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit" class="btn-primary">Login</button>
+        <p>No account? <a href="#">Sign up</a></p>
       </form>
     </div>
   </div>
+  <div id="footer-container"></div>
 
-</div>
   <script src="js/main.js"></script>
-  <script src="js/components/load.js"></script>
 </body>
 </html>
