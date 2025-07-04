@@ -1,0 +1,128 @@
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #FFE5E5;
+  color: #343A40;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.form-container {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+.tab-buttons button {
+  background-color: #FFE5E5;
+  color: #C42F75;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.tab-buttons button.active {
+  background-color: #C42F75;
+  color: white;
+}
+
+.tab-buttons button:hover {
+  background-color: #E45D5D;
+  color: white;
+}
+
+
+h2 {
+  color: #343A40;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+form input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #F8F9FA;
+  color: #343A40;
+}
+
+form input::placeholder {
+  color: #6C757D;
+}
+
+form button {
+  background-color: #D63384;
+  color: white;
+  padding: 14px 22px;
+  width: 100%;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #FF6B6B;
+}
+
+form p {
+  font-size: 14px;
+  color: #6C757D;
+  margin-top: 10px;
+}
+
+form a {
+  color: #D63384;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#ageWarning,
+#passwordWarning {
+  color: #FF6B6B;
+  font-size: 14px;
+  margin-bottom: 10px;
+  display: none;
+}
+
+/* Mobile optimization */
+@media screen and (max-width: 480px) {
+  .form-container {
+    padding: 20px 15px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  form input,
+  form button {
+    font-size: 15px;
+  }
+}
+
+.form-section {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.form-section.active {
+  display: block;
+  opacity: 1;
+}
